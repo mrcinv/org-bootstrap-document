@@ -24,6 +24,14 @@ $( document ).ready(function() {
     $('#table-of-contents, .outline-2').wrapAll("<div class='row'></div>");
     $('#table-of-contents').wrap("<div class='col-md-3'></div>");
     $('.outline-2').wrapAll("<div class='col-md-9'></div>");
+    $('.outline-5').addClass('panel panel-success');
+    $('.outline-text-5').addClass('panel-body collapse');
+    $('.outline-5 h5').wrap("<div class='panel-heading'></div>");
+    $('.panel-heading').attr("data-toggle","collapse");
+    $('.panel-heading').attr("role","button");
+    $('.outline-text-5').each(function(idx,elt){
+        $( elt ).prev('.panel-heading').attr("href","#"+$(elt).attr('id'));
+    });
     $('.col-md-9').after( $('.col-md-3') );
     $('#table-of-contents').empty();
     $('#table-of-contents').addClass('nav-list');
