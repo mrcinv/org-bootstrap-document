@@ -27,6 +27,11 @@ code{
     cursor: pointer;
 }
 
+pre.example {
+    background: transparent;
+    margin-left: 10px;
+    border: 0px;
+}
 /* Stolen from getbootstrap.com */
 
 @media (min-width:768px){
